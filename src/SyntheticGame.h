@@ -1,13 +1,12 @@
 
 /*
 * * * * * * * * * * *
-*  »¶Ó­Íæ¸ßÑªÑ¹ÓÎÏ· *
+*  æ¬¢è¿ŽçŽ©é«˜è¡€åŽ‹æ¸¸æˆ *
 *      By YYYCZ     *
 * * * * * * * * * * *
 */
 
-// ºÏ³É´óÎ÷¹Ï
-// ½ö¹©Ñ§Ï°½»Á÷£¬½ûÖ¹ÈÎºÎÐÎÊ½µÄÉÌÒµÓÃÍ¾
+// åˆæˆå¤§è¥¿ç“œ
 
 #pragma once
 #ifndef _SYNTHETIC_GAME_
@@ -19,27 +18,27 @@
 
 namespace YYYCZ
 {
-	//µ÷ÓÃ´Ëº¯Êý¿ìËÙ¿ªÊ¼ÓÎÏ·
+	//è°ƒç”¨æ­¤å‡½æ•°å¿«é€Ÿå¼€å§‹æ¸¸æˆ
 	inline void GameStart()
 	{
 		SyntheticGameEngine* MyGame = new SyntheticGameEngine;
 
-		//ÉèÖÃÓÎÏ·ÄÑ¶È
+		//è®¾ç½®æ¸¸æˆéš¾åº¦
 		//MyGame->SetDifficulty(5.0f);
 
-		//ÉèÖÃÓÎÏ·´°¿ÚÃû³Æ
+		//è®¾ç½®æ¸¸æˆçª—å£åç§°
 		//MyGame->SetSGEName("Synthetic Game - By YYYCZ");
 
-		//ÉèÖÃ´°¿Ú´óÐ¡ºÍ¶ÔÓ¦µ½¡°ÎïÀíÊÀ½ç¡±µÄ³ß´ç
+		//è®¾ç½®çª—å£å¤§å°å’Œå¯¹åº”åˆ°â€œç‰©ç†ä¸–ç•Œâ€çš„å°ºå¯¸
 		//MyGame->SetSGESize(400, 800);
 		//MyGame->SetScale(20.0f);
 		//MyGame->SetLineHeight(150);
 
-		//ÉèÖÃÑÕÉ«
+		//è®¾ç½®é¢œè‰²
 		//MyGame->SetColor(ColorArea::BackgroundArea,olc::WHITE);
 		//MyGame->SetColor(ColorArea::FontArea, olc::BLACK);
 
-		//ÉèÖÃÍ¼Æ¬Â·¾¶
+		//è®¾ç½®å›¾ç‰‡è·¯å¾„
 		MyGame->SetPicturePath(".\\Picture");
 		//MyGame->SetFileName(FileName::BackgroundName, "Background.png");
 		//MyGame->SetFileName(FileName::BallName, "");
@@ -50,22 +49,22 @@ namespace YYYCZ
 		//MyGame->SetFileName(FileName::EffectFlowerAName, "FlowerA");
 		//MyGame->SetFileName(FileName::EffectFlowerBName, "FlowerB");
 
-		//¼ÓÔØÒôÆµ
+		//åŠ è½½éŸ³é¢‘
 		MyGame->LoadAudio(AudioName::SynthesisAudio, ".\\Sound\\synthesis.wav");
 		MyGame->LoadAudio(AudioName::DeadAudio, ".\\Sound\\dead.wav");
 		MyGame->LoadAudio(AudioName::BackgroundAudio, ".\\Sound\\background.wav");
 		MyGame->LoadAudio(AudioName::SuccessAudio, ".\\Sound\\success.wav");
 
-		//¼ÓÔØµÀ¾ß
-		//×¢£ºµÀ¾ß¼ÓÔØµÄÍ¼Æ¬Îª 
-		//Í¼Æ¬Â·¾¶£¨ÔÚÉÏÃæÒÑÉèÖÃ£© + µÀ¾ßÃû³Æ + ºó×ºÃû£¨ÔÚÉÏÃæÒÑÉèÖÃ£©
+		//åŠ è½½é“å…·
+		//æ³¨ï¼šé“å…·åŠ è½½çš„å›¾ç‰‡ä¸º 
+		//å›¾ç‰‡è·¯å¾„ï¼ˆåœ¨ä¸Šé¢å·²è®¾ç½®ï¼‰ + é“å…·åç§° + åŽç¼€åï¼ˆåœ¨ä¸Šé¢å·²è®¾ç½®ï¼‰
 		MyGame->LoadProp<PropChange>();
 		MyGame->LoadProp<PropDestroy>();
 		MyGame->LoadProp<PropRandom>();
 		MyGame->LoadProp<PropGravity>();
 		MyGame->LoadProp<PropFuse>();
 
-		//ÉèÖÃµÀ¾ßÉú³ÉµÄ¸ÅÂÊ
+		//è®¾ç½®é“å…·ç”Ÿæˆçš„æ¦‚çŽ‡
 		//MyGame->SetPropProbability(0.1f);
 
 		MyGame->GameStart();
